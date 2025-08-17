@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b37byu4ev2lnk"]
+[gd_scene load_steps=7 format=3 uid="uid://b37byu4ev2lnk"]
 
 [ext_resource type="MeshLibrary" uid="uid://1ef0pto8tlgp" path="res://MeshLibraries/SpaceLibrary.tres" id="1_lvb7b"]
 
@@ -17,6 +17,13 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5x8ra"]
 albedo_color = Color(0.266667, 0.266667, 0.266667, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_lvb7b"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.8192, 0, 6.11476, -0.997947, 0, 0.174009, 0.997947, 0, -0.174009, 14.1876, 0, 6.12191, 0.306298, 0, 1.43014, -0.306298, 0, -1.43014, 14.15, 0, -2.04087, 0.923514, 0, 1.07753, -0.923514, 0, -1.07753, -14.0938, 0, -2.1105, 0, 0, 0, 0, 0, 0, -14.0634, 0, -8.28394),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
 
 [node name="Node3D" type="Node3D"]
 
@@ -42,3 +49,6 @@ cell_center_y = false
 data = {
 "cells": PackedInt32Array(65535, 65534, 0, 65535, 2, 0, 4, 65535, 0, 65530, 65535, 0, 65530, 65534, 0, 65530, 0, 0, 65530, 2, 0, 65531, 65534, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 65534, 65534, 0, 65534, 2, 0, 0, 65534, 0, 0, 2, 0, 1, 65534, 0, 1, 2, 0, 2, 65534, 0, 2, 2, 0, 3, 65534, 0, 3, 2, 0, 4, 65534, 0, 4, 0, 0, 4, 1, 0, 4, 2, 0, 65531, 65535, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 65533, 65534, 0)
 }
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_lvb7b")
